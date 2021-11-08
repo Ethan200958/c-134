@@ -44,14 +44,14 @@ function draw() {
           stroke(r);
           rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
 
-          if(objects[i].label == "person") {
-            document.getElementById("number_objects").innerHTML = "Baby/babies Found";
-            document.getElementById("status").innerHTML = "Status: Baby Detected";
-            alarm.stop();
-          } else {
+          if(objects[i].length > 1) {
             document.getElementById("number_objects").innerHTML = "Baby no where to be seen";
             document.getElementById("status").innerHTML = "Status: Baby Not Detected";
             alarm.play();
+          } else {
+            document.getElementById("number_objects").innerHTML = "Baby/babues found";
+            document.getElementById("status").innerHTML = "Status: Baby Detected";
+            alarm.stop();
           }
         }
       }
