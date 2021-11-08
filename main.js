@@ -44,7 +44,7 @@ function draw() {
           stroke(r);
           rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
 
-          if(objects[i].length > 1) {
+          if(objects[i].label == "person") {
             document.getElementById("number_objects").innerHTML = "Baby/babies Found";
             document.getElementById("status").innerHTML = "Status: Baby Detected";
             alarm.stop();
